@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+/* Make root elements full-height so flex layouts can fill screen */
+html, body {
+  height: 100%;
+}
+
 /* Body and typography */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -155,7 +160,7 @@ a:hover {
   color: #dddddd;
 }
 
-/* Media layout (when not fullscreen) */
+/* Media layout (for non-fullscreen parts, like images) */
 .media-layout {
   display: flex;
   flex-direction: column;
@@ -175,17 +180,29 @@ a:hover {
   object-fit: cover;
 }
 
-/* Full-screen video on Media page */
-.video-wrapper {
+/* Fullscreen Media page layout */
+
+/* Only affect the Media page when the body has this class */
+.media-body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Region between header and footer that should be filled by the video */
+.media-fullscreen {
+  flex: 1;
+  display: flex;
+}
+
+/* Make the iframe fill the available space */
 .video-fullscreen {
-  display: block;
-  width: 100vw;
-  height: 100vh;
+  flex: 1;
+  width: 100%;
+  height: 100%;
   border: none;
+  display: block;
 }
 
 /* Footer */
