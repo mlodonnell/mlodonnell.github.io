@@ -152,8 +152,8 @@ a:hover {
 .vector-comb {
   display: inline-block;
   margin-left: -0.5em;    /* center arrow horizontally over letter */
-  vertical-align: 0.35em; /* raise arrow a bit more above baseline */
-  font-size: 0.8em;
+  vertical-align: 0.5em; /* raise arrow a bit more above baseline */
+  font-size: 1em;
 }
 
 
@@ -248,4 +248,5 @@ a:hover {
     padding: 72px 16px;
   }
 }
+
 
