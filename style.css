@@ -151,19 +151,21 @@ a:hover {
 
 .vector-comb {
   display: inline-block;
-  margin-left: -0.55em;   /* shift arrow back over the letter */
-  vertical-align: 0.2em;  /* adjust vertical placement */
+  margin-left: -0.5em;    /* center arrow horizontally over letter */
+  vertical-align: 0.35em; /* raise arrow a bit more above baseline */
   font-size: 0.8em;
 }
+
 
 /* Ensemble text under the math */
 .hero-ensemble {
   margin-top: 16px;
   font-size: clamp(1.4rem, 3vw, 1.8rem);
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
+  letter-spacing: 0.18em;   /* slightly tighter tracking for mixed case */
+  text-transform: none;     /* keep “Ensemble” exactly as typed */
   opacity: 0.9;
 }
+
 
 /* Sections (for other pages) */
 .section h2 {
@@ -246,3 +248,4 @@ a:hover {
     padding: 72px 16px;
   }
 }
+
