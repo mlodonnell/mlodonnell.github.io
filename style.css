@@ -85,7 +85,7 @@ a:hover {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("assets/solenoid_pic.jpeg"); /* ensure this file exists in /assets */
+  background-image: url("assets/solenoid_pic.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -93,6 +93,7 @@ a:hover {
   transform: scale(1.03);
   z-index: -2;
 }
+
 
 /* Dark overlay */
 .hero::before {
@@ -231,4 +232,5 @@ a:hover {
     padding: 72px 16px;
   }
 }
+
 
