@@ -85,9 +85,10 @@ a:hover {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("assets/hero.jpg"); /* adjust filename if needed */
+  background-image: url("assets/hero.jpg"); /* ensure this file exists in /assets */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   filter: grayscale(0.2) contrast(1.1) brightness(0.6);
   transform: scale(1.03);
   z-index: -2;
