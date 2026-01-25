@@ -143,18 +143,20 @@ a:hover {
   letter-spacing: 0.08em;
 }
 
-/* Vector notation: base letter + combining arrow glyph shifted back over it */
+/* Vector arrow overlay for m and B */
 .vector {
   position: relative;
   display: inline-block;
 }
 
+/* Combining right-arrow above, centered and larger */
 .vector-comb {
   display: inline-block;
-  margin-left: -0.5em;    /* center arrow horizontally over letter */
-  vertical-align: 0.75em; /* raise arrow a bit more above baseline */
-  font-size: 1em;
+  margin-left: -0.55em;    /* shift arrow left over letter */
+  vertical-align: 0.55em;  /* raise arrow higher above letter */
+  font-size: 1.0em;        /* larger arrow glyph */
 }
+
 
 
 /* Ensemble text under the math */
@@ -248,6 +250,7 @@ a:hover {
     padding: 72px 16px;
   }
 }
+
 
 
 
