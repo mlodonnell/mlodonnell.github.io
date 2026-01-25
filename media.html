@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media – Em Bronze Ensemble</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="theory.html">Theory</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>Media</h2>
+
+    <div class="media-layout">
+      <div class="video-wrapper">
+        <!-- Replace YOUTUBE_ID with your actual video id when ready -->
+        <iframe
+          src="https://www.youtube.com/embed/YOUTUBE_ID"
+          title="Em Bronze Ensemble"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="media-images">
+        <img src="assets/media1.jpg" alt="Performance still 1">
+        <img src="assets/media2.jpg" alt="Performance still 2">
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Em Bronze Ensemble</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
