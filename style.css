@@ -143,31 +143,36 @@ a:hover {
   letter-spacing: 0.08em;
 }
 
-/* Vector arrow overlay for m and B */
+/* Vector notation: base letter + combining arrow glyph */
 .vector {
   position: relative;
   display: inline-block;
 }
 
-/* Combining right-arrow above, centered and larger */
-.vector-comb {
+/* Arrow above m */
+.vector-comb-m {
   display: inline-block;
-  margin-left: -0.55em;    /* shift arrow left over letter */
-  vertical-align: 0.5em;  /* raise arrow higher above letter */
-  font-size: 2.0em;        /* larger arrow glyph */
+  margin-left: -0.52em;   /* horizontal centering over m */
+  vertical-align: 0.42em; /* height above m */
+  font-size: 1.15em;      /* larger arrow */
 }
 
-
+/* Arrow above B */
+.vector-comb-B {
+  display: inline-block;
+  margin-left: -0.50em;   /* horizontal centering over B */
+  vertical-align: 0.40em; /* height above B */
+  font-size: 1.15em;      /* same size for consistency */
+}
 
 /* Ensemble text under the math */
 .hero-ensemble {
   margin-top: 16px;
   font-size: clamp(1.4rem, 3vw, 1.8rem);
-  letter-spacing: 0.18em;   /* slightly tighter tracking for mixed case */
-  text-transform: none;     /* keep “Ensemble” exactly as typed */
+  letter-spacing: 0.18em;
+  text-transform: none;    /* keep “Ensemble” as typed */
   opacity: 0.9;
 }
-
 
 /* Sections (for other pages) */
 .section h2 {
@@ -250,8 +255,3 @@ a:hover {
     padding: 72px 16px;
   }
 }
-
-
-
-
-
