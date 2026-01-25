@@ -94,7 +94,6 @@ a:hover {
   z-index: -2;
 }
 
-
 /* Dark overlay */
 .hero::before {
   content: "";
@@ -130,17 +129,31 @@ a:hover {
   opacity: 0.8;
 }
 
+/* Em and Bronze text styling */
 .em,
 .bronze {
   font-family: "Times New Roman", "Georgia", serif;
   letter-spacing: 0.08em;
 }
 
-.vec-arrow {
-  font-size: 0.7em;
-  opacity: 0.75;
-  transform: translateY(-0.4em);
+/* Vector letter with hat (for m and B) */
+.vec-letter {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em; /* room for hat */
 }
+
+.vec-hat {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -60%);
+  font-size: 0.7em;
+  line-height: 1;
+}
+
+/* Remove old right-side arrows entirely */
+/* (no .vec-arrow styles needed now) */
 
 /* Ensemble text under the math */
 .hero-ensemble {
@@ -232,5 +245,3 @@ a:hover {
     padding: 72px 16px;
   }
 }
-
-
