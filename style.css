@@ -118,7 +118,7 @@ a:hover {
   font-weight: 500;
 }
 
-/* τ, =, ×, Em, Bronze all in Cambria-style math font */
+/* All hero math text in Cambria-style math font */
 .tau,
 .equals,
 .cross,
@@ -143,19 +143,17 @@ a:hover {
   letter-spacing: 0.08em;
 }
 
-/* Vector notation: letter + rightward arrow */
+/* Vector notation: base letter + combining arrow glyph shifted back over it */
 .vector {
   position: relative;
   display: inline-block;
-  padding-right: 0.25em; /* room for arrow */
 }
 
-.vector-arrow {
-  position: absolute;
-  right: 0;
-  top: -0.35em;  /* raise arrow above baseline */
-  font-size: 0.75em;
-  line-height: 1;
+.vector-comb {
+  display: inline-block;
+  margin-left: -0.55em;   /* shift arrow back over the letter */
+  vertical-align: 0.2em;  /* adjust vertical placement */
+  font-size: 0.8em;
 }
 
 /* Ensemble text under the math */
