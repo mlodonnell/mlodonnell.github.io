@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: #050506;
+  color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+/* Top nav */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0));
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 480px;
+  color: #f5f5f5;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/hero.jpg"); /* put your vertical image there */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(40%);
+  opacity: 0.65;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.06), transparent 45%),
+              linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.95));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem clamp(2rem, 7vw, 6rem);
+}
+
+/* Mathematical hero text */
+
+.hero-math {
+  font-family: "Times New Roman", "Times", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-style: italic;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.vec-arrow {
+  font-size: 0.8em;
+  position: relative;
+  top: -0.5em;
+  margin-left: -0.6em;
+  opacity: 0.7;
+}
+
+.tau,
+.em,
+.bronze,
+.cross,
+.equals {
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+}
+
+.hero-ensemble {
+  font-family: "Times New Roman", "Times", serif;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-style: italic;
+  margin-top: 0.4em;
+  padding-left: 0.5em;
+  border-left: 2px solid rgba(255,255,255,0.5);
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+}
+
+/* Sections */
+
+.section {
+  padding: 4rem clamp(2rem, 7vw, 6rem);
+  background-color: #050506;
+  color: #f5f5f5;
+}
+
+.section:nth-of-type(odd) {
+  background-color: #08080a;
+}
+
+.section h2 {
+  font-family: "Times New Roman", "Times", serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+}
+
+.section p {
+ 
