@@ -153,7 +153,7 @@ a:hover {
 .vector-comb-m {
   display: inline-block;
   margin-left: -0.52em;   /* horizontal centering over m */
-  vertical-align: 0.42em; /* height above m */
+  vertical-align: 0.32em; /* lower than previous version */
   font-size: 1.15em;      /* larger arrow */
 }
 
@@ -161,7 +161,7 @@ a:hover {
 .vector-comb-B {
   display: inline-block;
   margin-left: -0.50em;   /* horizontal centering over B */
-  vertical-align: 0.40em; /* height above B */
+  vertical-align: 0.30em; /* lower than previous version */
   font-size: 1.15em;      /* same size for consistency */
 }
 
