@@ -7,24 +7,35 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-<header class="site-header">
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="theory.html">Theory</a>
-    <a href="media.html">Media</a>
-    <a href="research.html">Research</a>
-    <a href="live.html">Live Performance</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
 
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="theory.html">Theory</a>
+      <a href="media.html">Media</a>
+      <a href="research.html">Research</a>
+      <a href="live.html">Live Performance</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
   <section class="section section-narrow">
     <h2>About</h2>
-    <p>About page placeholder.</p>
+    <p>
+      Em Bronze Ensemble is a contemporary percussion and electronics project
+      exploring torque, resonance, and electromagnetic gesture in bronze.
+      This page is a placeholder for a fuller description of the ensemble,
+      collaborators, and artistic background.
+    </p>
   </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Em Bronze Ensemble</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
