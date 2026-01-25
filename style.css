@@ -136,14 +136,14 @@ a:hover {
   letter-spacing: 0.08em;
 }
 
-/* Vector letter with hat (for m and B) */
-.vec-letter {
+/* Vector notation: letter + hat stacked */
+.vector {
   position: relative;
   display: inline-block;
-  padding-top: 0.2em; /* room for hat */
+  padding-top: 0.15em; /* room for hat */
 }
 
-.vec-hat {
+.vector-hat {
   position: absolute;
   left: 50%;
   top: 0;
@@ -151,9 +151,6 @@ a:hover {
   font-size: 0.7em;
   line-height: 1;
 }
-
-/* Remove old right-side arrows entirely */
-/* (no .vec-arrow styles needed now) */
 
 /* Ensemble text under the math */
 .hero-ensemble {
