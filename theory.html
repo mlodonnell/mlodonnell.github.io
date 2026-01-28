@@ -5,6 +5,108 @@
   <title>Theory – Em Bronze Ensemble</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .theory-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5f5f5;
+      text-align: left;
+      overflow: hidden;
+      padding: 3rem 1.5rem;
+    }
+
+    .theory-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('Matthew-L.-O-Donnell-Promo-photos_Matthew-L.-O-Donnell-promo-photo-6.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.25) saturate(1.1);
+      z-index: -2;
+    }
+
+    .theory-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 70% 30%, rgba(0,255,150,0.25), transparent 55%),
+        linear-gradient(to bottom right, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
+      z-index: -1;
+    }
+
+    .theory-panel {
+      max-width: 720px;
+      background: rgba(0, 0, 0, 0.65);
+      border-radius: 10px;
+      padding: 2.2rem 2.5rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .theory-panel h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 2.2rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .theory-subtitle {
+      font-size: 0.95rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #a5ffcf;
+      margin-bottom: 1.8rem;
+    }
+
+    .equation-block {
+      font-family: "Times New Roman", serif;
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .equation-main {
+      font-size: 1.8rem;
+    }
+
+    .equation-note {
+      font-size: 0.9rem;
+      color: #d0e9dd;
+      margin-top: 0.5rem;
+    }
+
+    .theory-text {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #f1f1f1;
+      margin-bottom: 1.1rem;
+    }
+
+    .theory-text em {
+      font-style: italic;
+    }
+
+    .theory-inline-math {
+      font-family: "Times New Roman", serif;
+    }
+
+    @media (max-width: 700px) {
+      .theory-panel {
+        padding: 1.6rem 1.5rem;
+      }
+
+      .theory-panel h2 {
+        font-size: 1.8rem;
+      }
+
+      .equation-main {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -14,20 +116,65 @@
       <a href="emx-bronze.html">Em × Bronze Ensemble</a>
       <a href="bio.html">Bio</a>
       <a href="theory.html">Theory</a>
-      <a href="pastwork.html">Past Work</a>
+      <a href="media.html">Past Work</a>
       <a href="research.html">Research</a>
       <a href="live.html">Live Performance</a>
     </nav>
   </header>
 
-  <section class="section section-narrow">
-    <h2>Theory</h2>
-    <p>
-      This is a placeholder for Theory content. You can describe the physical
-      and musical ideas behind the project: torque τ, electromagnetic drive,
-      spatialized resonance, mathematical structures, and related concepts.
-    </p>
-  </section>
+  <main class="theory-hero">
+    <div class="theory-bg"></div>
+
+    <section class="theory-panel">
+      <h2>Theory</h2>
+      <div class="theory-subtitle">Torque, field, and bronze</div>
+
+      <div class="equation-block">
+        <div class="equation-main">
+          τ = <span class="theory-inline-math">E</span>
+          <span class="theory-inline-math">
+            m<span style="position:relative; display:inline-block;">
+              <span style="position:absolute; left:50%; transform:translateX(-50%); top:-0.9em; font-size:0.55em;">&#8407;</span>
+            </span>
+          </span>
+          ×
+          <span class="theory-inline-math">
+            B<span style="position:relative; display:inline-block;">
+              <span style="position:absolute; left:50%; transform:translateX(-50%); top:-0.9em; font-size:0.55em;">&#8407;</span>
+            </span>
+          </span>
+        </div>
+        <div class="equation-note">
+          Torque emerges from the cross product of an applied field, an
+          effective dipole in bronze, and the local magnetic flux density.
+        </div>
+      </div>
+
+      <p class="theory-text">
+        The ensemble treats each bronze plate as a coupled resonator, driven by
+        carefully shaped electromagnetic fields. By controlling the phase and
+        amplitude of <span class="theory-inline-math">E</span> and
+        <span class="theory-inline-math">B</span>, the torque
+        <span class="theory-inline-math">τ</span> becomes a compositional
+        parameter rather than a hidden mechanical detail.
+      </p>
+
+      <p class="theory-text">
+        In practice, the effective magnetic dipole
+        <span class="theory-inline-math">m&#8407;</span> is distributed across
+        the geometry of the cymbal or gong. Small changes in coil placement,
+        drive frequency, and current produce macroscopic differences in
+        trajectory, articulation, and spectral content.
+      </p>
+
+      <p class="theory-text">
+        The project explores these relationships at the boundary between
+        experimental physics and performance, where feedback, saturation, and
+        nonlinearity are not errors to be suppressed but the material of the
+        piece itself.
+      </p>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> Em Bronze Ensemble</p>
