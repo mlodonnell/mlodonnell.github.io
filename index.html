@@ -1,88 +1,149 @@
-<style>
-  .hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #f5f5f5;
-    overflow: hidden;
-  }
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("assets/EMBronzePromo.png");  /* <-- update to this */
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.35) saturate(1.1);
-  z-index: -2;
-}
-
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 40% 40%, rgba(0,255,150,0.25), transparent 55%),
-                linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
-    mix-blend-mode: soft-light;
-    z-index: -1;
-  }
-
-  .hero-content {
-    position: relative;
-    text-align: center;
-    padding: 2rem;
-    /* push the math/logo block further down in the hero */
-    margin-top: 6rem;
-  }
-
-  .hero-math {
-    font-family: "Times New Roman", serif;
-    font-size: 3.5rem;
-    letter-spacing: 0.08em;
-    margin-bottom: 1.2rem;
-    white-space: nowrap;
-  }
-
-  .tau { font-style: italic; }
-
-  .equals { margin: 0 0.5rem; }
-
-  .em, .bronze {
-    position: relative;
-    display: inline-block;
-  }
-
-  .vector {
-    position: relative;
-    display: inline-block;
-  }
-
-  .vector-comb-m,
-  .vector-comb-B {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -1.1em;
-    font-size: 1.2em;
-  }
-
-  .hero-ensemble {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-  }
-
-  @media (max-width: 600px) {
-    .hero-math {
-      font-size: 2.4rem;
-      white-space: normal;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Em Bronze Ensemble</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero {
+      position: relative;
+      min-height: 100vh;           /* ensures section is tall enough */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5f5f5;
+      overflow: hidden;
     }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("assets/EMBronzePromo.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(0.35) saturate(1.1);
+      z-index: -2;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 40% 40%, rgba(0,255,150,0.25), transparent 55%),
+        linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
+      mix-blend-mode: soft-light;
+      z-index: -1;
+    }
+
     .hero-content {
-      margin-top: 4rem;
+      position: relative;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 6rem;  /* moves text down */
     }
-  }
-</style>
 
+    .hero-math {
+      font-family: "Times New Roman", serif;
+      font-size: 3.5rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem;
+      white-space: nowrap;
+    }
+
+    .tau { font-style: italic; }
+
+    .equals { margin: 0 0.5rem; }
+
+    .em, .bronze {
+      position: relative;
+      display: inline-block;
+    }
+
+    .vector {
+      position: relative;
+      display: inline-block;
+    }
+
+    .vector-comb-m,
+    .vector-comb-B {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -1.1em;
+      font-size: 1.2em;
+    }
+
+    .hero-ensemble {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+    }
+
+    @media (max-width: 600px) {
+      .hero-math {
+        font-size: 2.4rem;
+        white-space: normal;
+      }
+      .hero-content {
+        margin-top: 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="emx-bronze.html">Em × Bronze Ensemble</a>
+      <a href="bio.html">Bio</a>
+      <a href="theory.html">Theory</a>
+      <a href="pastwork.html">Past Work</a>
+      <a href="research.html">Research</a>
+      <a href="live.html">Live Performance</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+      <div class="hero-math">
+        <span class="tau">τ</span>
+        <span class="equals">=</span>
+
+        <span class="em">
+          E
+          <span class="vector">
+            m<span class="vector-comb-m">&#8407;</span>
+          </span>
+        </span>
+
+        <span class="equals">×</span>
+
+        <span class="bronze">
+          <span class="vector">
+            B<span class="vector-comb-B">&#8407;</span>
+          </span>
+          ronze
+        </span>
+      </div>
+
+      <div class="hero-ensemble">
+        Matthew O'Donnell
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Em Bronze Ensemble</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
