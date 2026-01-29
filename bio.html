@@ -23,7 +23,8 @@
       inset: 0;
       background-image: url("assets/portrait5.png");
       background-size: cover;
-      background-position: center;
+      /* move the visible part of the image upward */
+      background-position: center 20%;
       background-repeat: no-repeat;
       filter: brightness(0.3) saturate(1.05);
       z-index: -2;
@@ -44,6 +45,8 @@
       padding: 2.2rem 2.5rem;
       color: #f5f5f5;
       text-shadow: 0 1px 3px rgba(0,0,0,0.85);
+      /* push the text block slightly lower on the page */
+      margin-top: 4rem;
     }
 
     .bio-panel h2 {
@@ -71,6 +74,7 @@
     @media (max-width: 700px) {
       .bio-panel {
         padding: 1.6rem 1.5rem;
+        margin-top: 3rem;
       }
 
       .bio-panel h2 {
