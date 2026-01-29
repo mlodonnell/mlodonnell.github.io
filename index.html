@@ -9,15 +9,16 @@
     overflow: hidden;
   }
 
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url("assets/EMBronzePromo.png");
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.35) saturate(1.1);
-    z-index: -2;
-  }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/EMBronzePromo.png");  /* <-- update to this */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35) saturate(1.1);
+  z-index: -2;
+}
+
 
   .hero::before {
     content: "";
@@ -84,3 +85,4 @@
     }
   }
 </style>
+
