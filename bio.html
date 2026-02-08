@@ -1,127 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Bio – Matthew O'Donnell</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .bio-hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #f5f5f5;
-      text-align: left;
-      overflow: hidden;
-      padding: 3rem 1.5rem;
-    }
+<style>
+  .bio-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5f5f5;
+    text-align: left;
+    overflow: hidden;
+    padding: 3rem 1.5rem;
+  }
 
-    .bio-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url("assets/promo20.png");
-      background-size: cover;
-      background-position: center 20%;
-      background-repeat: no-repeat;
-      filter: brightness(0.3) saturate(1.05);
-      z-index: -2;
-    }
+  .bio-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/promo20.png");
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    /* much lighter: raise brightness, slightly lower saturation */
+    filter: brightness(0.85) saturate(1.0);
+    z-index: -2;
+  }
 
-    .bio-hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(0,255,150,0.25), transparent 55%),
-        linear-gradient(to bottom right, rgba(0,0,0,0.25), rgba(0,0,0,0.85));
-      z-index: -1;
-    }
+  .bio-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(0,255,150,0.12), transparent 55%),
+      /* soften the dark overlay */
+      linear-gradient(to bottom right, rgba(0,0,0,0.12), rgba(0,0,0,0.45));
+    z-index: -1;
+  }
 
+  .bio-panel {
+    max-width: 720px;
+    padding: 2.2rem 2.5rem;
+    color: #f5f5f5;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.75);
+    margin-top: 8rem;
+  }
+
+  .bio-panel h2 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 2.2rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .bio-subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #a5ffcf;
+    margin-bottom: 1.8rem;
+  }
+
+  .bio-text {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 1.1rem;
+  }
+
+  @media (max-width: 700px) {
     .bio-panel {
-      max-width: 720px;
-      padding: 2.2rem 2.5rem;
-      color: #f5f5f5;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.85);
-      margin-top: 8rem;   /* moves text lower on the page */
+      padding: 1.6rem 1.5rem;
+      margin-top: 5rem;
     }
 
     .bio-panel h2 {
-      margin-top: 0;
-      margin-bottom: 0.8rem;
-      font-size: 2.2rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      font-size: 1.8rem;
     }
-
-    .bio-subtitle {
-      font-size: 0.95rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #a5ffcf;
-      margin-bottom: 1.8rem;
-    }
-
-    .bio-text {
-      font-size: 0.98rem;
-      line-height: 1.6;
-      margin-bottom: 1.1rem;
-    }
-
-    @media (max-width: 700px) {
-      .bio-panel {
-        padding: 1.6rem 1.5rem;
-        margin-top: 5rem;
-      }
-
-      .bio-panel h2 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header class="site-header">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="emx-bronze.html">Em × Bronze Ensemble</a>
-      <a href="bio.html">Bio</a>
-      <a href="theory.html">Theory</a>
-      <a href="pastwork.html">Past Work</a>
-      <a href="research.html">Research</a>
-      <a href="live.html">Live Performance</a>
-    </nav>
-  </header>
-
-  <main class="bio-hero">
-    <div class="bio-bg"></div>
-
-    <section class="bio-panel">
-      <h2>Bio</h2>
-      <div class="bio-subtitle">Matthew O'Donnell</div>
-
-      <p class="bio-text">
-        This is a placeholder for your biography. Here you can add information
-        about your background, training, performance and research interests,
-        collaborations, and selected projects.
-      </p>
-
-      <p class="bio-text">
-        You might include a short narrative of how the Em × Bronze Ensemble
-        developed, key influences, and the relationship between your technical
-        work and performance practice.
-      </p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Matthew O'Donnell</p>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+  }
+</style>
