@@ -11,7 +11,7 @@
     }
 
     .section-narrow {
-      max-width: 800px;
+      max-width: 1100px; /* wider so thumbs can sit side by side */
       margin: 0 auto;
     }
 
@@ -36,6 +36,7 @@
     .emx-thumbnails {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 1.5rem;
       margin: 2rem auto;
       max-width: 960px;
@@ -43,7 +44,7 @@
 
     .emx-thumbnails img {
       display: block;
-      width: 30%;
+      flex: 0 0 30%;          /* three images per row, no wrapping */
       max-width: 260px;
       height: auto;
       border-radius: 6px;
@@ -57,7 +58,7 @@
         gap: 0.75rem;
       }
       .emx-thumbnails img {
-        width: 32%;
+        flex: 0 0 30%;
         max-width: none;
       }
     }
