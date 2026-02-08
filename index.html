@@ -19,11 +19,11 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url("assets/EMBronzePromo.png");  /* update to your current file name if different */
+      background-image: url("assets/EMBronzePromo.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      filter: brightness(0.6) saturate(1.05);  /* lighter than before */
+      filter: brightness(0.6) saturate(1.05);
       z-index: -2;
     }
 
@@ -45,7 +45,9 @@
       margin-top: 6rem;
     }
 
+    /* New, more robust math styling */
     .hero-math {
+      position: relative;
       font-family: "Times New Roman", serif;
       font-size: 3.5rem;
       letter-spacing: 0.08em;
@@ -54,7 +56,6 @@
     }
 
     .tau { font-style: italic; }
-
     .equals { margin: 0 0.5rem; }
 
     .em, .bronze {
@@ -62,18 +63,21 @@
       display: inline-block;
     }
 
-    .vector {
+    .vector-base {
       position: relative;
       display: inline-block;
+      padding: 0 0.05em;
     }
 
-    .vector-comb-m,
-    .vector-comb-B {
+    .vector-arrow {
       position: absolute;
-      left: 60%;                  /* nudged right to align with letters */
-      transform: translateX(-50%);
-      top: -1.1em;
-      font-size: 1.2em;
+      left: 0;
+      right: 0;
+      top: -0.7em;
+      text-align: center;
+      font-size: 0.6em;
+      line-height: 1;
+      pointer-events: none;
     }
 
     .hero-ensemble {
@@ -103,48 +107,45 @@
   <a href="research.html">Research</a>
 </nav>
 
+<section class="hero">
+  <div class="hero-bg"></div>
 
-  <section class="hero">
-    <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-math">
+      <span class="tau">τ</span>
+      <span class="equals">=</span>
 
-    <div class="hero-content">
-      <div class="hero-math">
-        <span class="tau">τ</span>
-        <span class="equals">=</span>
-
-        <span class="em">
-          E
-          <span class="vector">
-            m<span class="vector-comb-m">&#8407;</span>
-          </span>
+      <span class="em">
+        E
+        <span class="vector-base">
+          m
+          <span class="vector-arrow">⃗</span>
         </span>
+      </span>
 
-        <span class="equals">×</span>
+      <span class="equals">×</span>
 
-        <span class="bronze">
-          <span class="vector">
-            B<span class="vector-comb-B">&#8407;</span>
-          </span>
-          ronze
+      <span class="bronze">
+        <span class="vector-base">
+          B
+          <span class="vector-arrow">⃗</span>
         </span>
-      </div>
-
-      <div class="hero-ensemble">
-        Matthew O'Donnell
-      </div>
+        ronze
+      </span>
     </div>
-  </section>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Em Bronze Ensemble</p>
-  </footer>
+    <div class="hero-ensemble">
+      Matthew O'Donnell
+    </div>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<footer class="site-footer">
+  <p>© <span id="year"></span> Em Bronze Ensemble</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
-
-
-
