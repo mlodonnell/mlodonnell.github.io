@@ -84,6 +84,26 @@
       font-size: 1.2rem;
       text-transform: uppercase;
       letter-spacing: 0.22em;
+      margin-bottom: 1rem;
+    }
+
+    /* Scripture quote under name */
+    .hero-quote {
+      max-width: 700px;
+      margin: 0.5rem auto 0;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .hero-quote-citation {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 0.95rem;
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     @media (max-width: 600px) {
@@ -93,6 +113,9 @@
       }
       .hero-content {
         margin-top: 4rem;
+      }
+      .hero-quote {
+        font-size: 1rem;
       }
     }
   </style>
@@ -137,6 +160,11 @@
     <div class="hero-ensemble">
       Matthew O'Donnell
     </div>
+
+    <div class="hero-quote">
+      <span>Praise him with sounding cymbals, praise him with clanging cymbals. Let everything that breaths praise the LORD! Alleluia.</span>
+      <span class="hero-quote-citation">Psalms 150</span>
+    </div>
   </div>
 </section>
 
@@ -149,4 +177,3 @@
 </script>
 </body>
 </html>
-
