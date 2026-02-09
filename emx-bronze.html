@@ -15,6 +15,25 @@
       margin: 0 auto;
     }
 
+    /* Featured quote under title */
+    .emx-quote {
+      margin: 1.5rem auto 2rem;
+      max-width: 960px;
+      font-size: 1.15rem;
+      font-style: italic;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .emx-quote-citation {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
     /* Responsive YouTube embeds */
     .video-wrapper {
       position: relative;
@@ -40,11 +59,12 @@
       gap: 1.5rem;
       margin: 2rem auto;
       max-width: 960px;
+      flex-wrap: wrap;
     }
 
     .emx-thumbnails img {
       display: block;
-      flex: 0 0 30%;          /* three images per row, no wrapping */
+      flex: 0 0 30%;          /* three images per row, no wrapping at desktop width */
       max-width: 260px;
       height: auto;
       border-radius: 6px;
@@ -58,7 +78,7 @@
         gap: 0.75rem;
       }
       .emx-thumbnails img {
-        flex: 0 0 30%;
+        flex: 0 0 45%;
         max-width: none;
       }
     }
@@ -76,6 +96,12 @@
 
   <section class="section section-narrow">
     <h2>Em × Bronze Ensemble</h2>
+
+    <div class="emx-quote">
+      <span>If I speak in human and angelic tongues, but do not have love, I am a resounding gong or a clashing cymbal.</span>
+      <span class="emx-quote-citation">1 Corinthians 12:31</span>
+    </div>
+
     <p>
       This is a placeholder page for the Em × Bronze Ensemble project. Here you
       can describe the ensemble concept, instrumentation, technical approach,
@@ -95,7 +121,6 @@
       <a href="assets/twohandscymbal.png" target="_blank" rel="noopener">
         <img src="assets/twohandscymbal.png" alt="thumb4">
       </a>
-
     </div>
 
     <!-- First YouTube video -->
