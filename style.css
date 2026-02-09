@@ -216,15 +216,23 @@ a:hover {
   flex-wrap: nowrap;          /* force a single row on larger screens */
 }
 
+/* Base thumbnail size */
 .emx-thumbnails img {
   display: block;
-  flex: 0 0 20%;              /* four images per row */
-  max-width: 220px;
+  flex: 0 0 22%;
+  max-width: 200px;
   height: auto;
   border-radius: 6px;
   object-fit: cover;
   box-shadow: 0 8px 18px rgba(0,0,0,0.35);
   cursor: pointer;
+}
+
+/* First two slightly smaller */
+.emx-thumbnails a:nth-child(1) img,
+.emx-thumbnails a:nth-child(2) img {
+  flex: 0 0 18%;
+  max-width: 170px;
 }
 
 /* Fullscreen Media page layout */
@@ -280,9 +288,12 @@ a:hover {
   .emx-thumbnails {
     gap: 12px;
     max-width: 100%;
+    flex-wrap: wrap; /* allow wrapping on phones */
   }
 
-  .emx-thumbnails img {
+  .emx-thumbnails img,
+  .emx-thumbnails a:nth-child(1) img,
+  .emx-thumbnails a:nth-child(2) img {
     flex: 0 0 23%;
     max-width: none;
   }
