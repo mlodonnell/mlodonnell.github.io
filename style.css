@@ -36,7 +36,7 @@ a:hover {
 }
 
 .section-narrow {
-  max-width: 800px;
+  max-width: 1100px; /* wider so thumbs can sit side by side */
   margin: 0 auto;
 }
 
@@ -185,7 +185,7 @@ a:hover {
   color: #dddddd;
 }
 
-/* Media layout (for non-fullscreen parts, like images) */
+/* Media layout (for other pages) */
 .media-layout {
   display: flex;
   flex-direction: column;
@@ -203,6 +203,28 @@ a:hover {
   height: auto;
   border-radius: 4px;
   object-fit: cover;
+}
+
+/* Thumbnail row on Em × Bronze page */
+.emx-thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 32px auto;
+  max-width: 1100px;
+  flex-wrap: nowrap;          /* force a single row on larger screens */
+}
+
+.emx-thumbnails img {
+  display: block;
+  flex: 0 0 20%;              /* four images per row */
+  max-width: 220px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  cursor: pointer;
 }
 
 /* Fullscreen Media page layout */
@@ -253,5 +275,15 @@ a:hover {
 
   .section {
     padding: 72px 16px;
+  }
+
+  .emx-thumbnails {
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .emx-thumbnails img {
+    flex: 0 0 23%;
+    max-width: none;
   }
 }
