@@ -11,11 +11,17 @@
     }
 
     .section-narrow {
-      max-width: 1100px; /* wider so thumbs can sit side by side */
+      max-width: 900px;
       margin: 0 auto;
     }
 
-    
+    .section-narrow p {
+      max-width: 70ch;           /* more readable line length */
+      margin: 0 auto 1rem;
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
     /* Responsive YouTube embeds */
     .video-wrapper {
       position: relative;
@@ -37,17 +43,21 @@
     .emx-thumbnails {
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 1.5rem;
+      align-items: flex-start;
+      gap: 1rem;
       margin: 2rem auto;
       max-width: 960px;
       flex-wrap: wrap;
     }
 
+    .emx-thumbnails a {
+      flex: 1 1 45%;
+      max-width: 210px;
+    }
+
     .emx-thumbnails img {
       display: block;
-      flex: 0 0 30%;          /* three images per row, no wrapping at desktop width */
-      max-width: 260px;
+      width: 100%;
       height: auto;
       border-radius: 6px;
       object-fit: cover;
@@ -56,12 +66,40 @@
     }
 
     @media (max-width: 800px) {
+      .section {
+        padding: 2.5rem 1.25rem;
+      }
+
+      .section-narrow p {
+        font-size: 0.95rem;
+        max-width: 60ch;
+      }
+
       .emx-thumbnails {
         gap: 0.75rem;
       }
-      .emx-thumbnails img {
-        flex: 0 0 45%;
+
+      .emx-thumbnails a {
+        flex: 1 1 48%;           /* two thumbnails per row on phones */
         max-width: none;
+      }
+
+      .video-wrapper {
+        margin-top: 1.5rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .section {
+        padding: 2rem 1rem;
+      }
+
+      .section-narrow p {
+        max-width: 55ch;
+      }
+
+      .emx-thumbnails a {
+        flex: 1 1 100%;          /* one per row on very small screens */
       }
     }
   </style>
@@ -76,71 +114,76 @@
   <a href="research.html">Research</a>
 </nav>
 
-  <section class="section section-narrow">
-    <h2>Em × Bronze Ensemble</h2>
+<section class="section section-narrow">
+  <h2>Em × Bronze Ensemble</h2>
 
-    <p>
- Em x Bronze Ensemble is a project for one to many simultaneously playing electromagnetically prepared cymbals and gongs. What you hear in the videos are 
-      cymbals and gongs excited at their resonant frequencies using non-contact electromagnetic actuators. Each metal percussion instrument's spectrum is captured.
-      Filtered portions of the instrument's spectrum drives the electromagnet. Sometimes Matthew uses microphone-instrument feedback 
-      and lets the instrument play itself. Matthew uses SuperCollider code. 
-      </p>
+  <p>
+    Em × Bronze Ensemble is a project for one to many simultaneously playing electromagnetically prepared
+    cymbals and gongs. What you hear in the videos are cymbals and gongs excited at their resonant
+    frequencies using non-contact electromagnetic actuators. Each metal percussion instrument's spectrum
+    is captured. Filtered portions of the instrument's spectrum drive the electromagnet. Sometimes
+    Matthew uses microphone–instrument feedback and lets the instrument play itself. Matthew uses
+    SuperCollider code.
+  </p>
 
-      <p>
-      Matthew has been vibrating cymbals, gongs and sheets of metal since the early 2000's. He first used modified loudspeakers to excite cymbals by removing the paper 
-      cone and epoxying a threaded rod directly to the voicecoil and bolting the other end to a cymbal. Over many years, Matthew has developed a way to excite
-      percussion instruments without contact using electromagnets. He is still perfecting the technique. 
-      </p>
-        
-      <p>
-      Em x Bronze Ensemble operates just before the onset of the familiar splash of a crash cymbal when struck with a mallet or a glancing blow with a drum stick.
-      Metal percussion instruments exhbibit very rich dynamics. A cymbal or gong has on the order of a hundred resonant modes that are not harmonically related as they are in 
-      a stringed instrument or a column of air in a wind instrument. Matthew likes to explore the region of phase space before the onset of chaos. 
-      </p>
-    </p>
+  <p>
+    Matthew has been vibrating cymbals, gongs and sheets of metal since the early 2000s. He first used
+    modified loudspeakers to excite cymbals by removing the paper cone and epoxying a threaded rod
+    directly to the voice coil and bolting the other end to a cymbal. Over many years, Matthew has
+    developed a way to excite percussion instruments without contact using electromagnets. He is still
+    perfecting the technique.
+  </p>
 
-    <div class="emx-thumbnails">
-      <a href="assets/image0.jpeg" target="_blank" rel="noopener">
-        <img src="assets/image0.jpeg" alt="thumb1">
-      </a>
-      <a href="assets/image1.jpeg" target="_blank" rel="noopener">
-        <img src="assets/image1.jpeg" alt="thumb2">
-      </a>
-      <a href="assets/promo20.png" target="_blank" rel="noopener">
-        <img src="assets/promo20.png" alt="thumb3">
-      </a>
-      <a href="assets/twohandscymbal.png" target="_blank" rel="noopener">
-        <img src="assets/twohandscymbal.png" alt="thumb4">
-      </a>
-    </div>
+  <p>
+    Em × Bronze Ensemble operates just before the onset of the familiar splash of a crash cymbal when
+    struck with a mallet or a glancing blow with a drumstick. Metal percussion instruments exhibit very
+    rich dynamics. A cymbal or gong has on the order of a hundred resonant modes that are not harmonically
+    related as they are in a stringed instrument or a column of air in a wind instrument. Matthew likes to
+    explore the region of phase space before the onset of chaos.
+  </p>
 
-    <!-- First YouTube video -->
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/VCV-Gvzd8Mo"
-        title="Em × Bronze Ensemble – Video 1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
+  <div class="emx-thumbnails">
+    <a href="assets/image0.jpeg" target="_blank" rel="noopener">
+      <img src="assets/image0.jpeg" alt="thumb1">
+    </a>
+    <a href="assets/image1.jpeg" target="_blank" rel="noopener">
+      <img src="assets/image1.jpeg" alt="thumb2">
+    </a>
+    <a href="assets/promo20.png" target="_blank" rel="noopener">
+      <img src="assets/promo20.png" alt="thumb3">
+    </a>
+    <a href="assets/twohandscymbal.png" target="_blank" rel="noopener">
+      <img src="assets/twohandscymbal.png" alt="thumb4">
+    </a>
+  </div>
 
-    <!-- Second YouTube video -->
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/5pX8IQchRYY?si=QjoyHfZayaX7p9h9" 
-        title="Em × Bronze Ensemble – Video 2"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
+  <!-- First YouTube video -->
+  <div class="video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/VCV-Gvzd8Mo"
+      title="Em × Bronze Ensemble – Video 1"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Em Bronze Ensemble</p>
-  </footer>
+  <!-- Second YouTube video -->
+  <div class="video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/5pX8IQchRYY?si=QjoyHfZayaX7p9h9"
+      title="Em × Bronze Ensemble – Video 2"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<footer class="site-footer">
+  <p>© <span id="year"></span> Em Bronze Ensemble</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
