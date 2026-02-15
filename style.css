@@ -298,3 +298,48 @@ a:hover {
     max-width: none;
   }
 }
+
+/* Thumbnail row above videos */
+.emx-thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  flex-wrap: nowrap;        /* single row on desktop */
+}
+
+.emx-thumbnails a {
+  flex: 0 0 22%;            /* 4 per row on large screens */
+  max-width: 230px;
+}
+
+.emx-thumbnails img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .emx-thumbnails {
+    flex-wrap: wrap;        /* allow wrapping on tablets/phones */
+    max-width: 960px;
+  }
+
+  .emx-thumbnails a {
+    flex: 1 1 48%;          /* 2 × 2 grid on typical phones/tablets */
+    max-width: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .emx-thumbnails a {
+    flex: 1 1 100%;         /* stack if the screen is very narrow */
+  }
+}
+
