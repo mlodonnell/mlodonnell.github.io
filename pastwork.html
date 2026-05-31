@@ -1,73 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Past Work | EM x Bronze Ensemble</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            line-height: 1.6; 
-            margin: 40px; 
-            max-width: 900px;
-            background-color: #000000; 
-            color: #ffffff;
-        }
-        h2, h3, h4 { 
-            color: #ffffff; 
-        }
-        a { 
-            color: #c0c0c0; 
-        }
-        a:hover { 
-            color: #ffffff; 
-        }
-        li { 
-            margin-bottom: 10px; 
-        }
-        hr {
-            border-color: #333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Past Work – Matthew O'Donnell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bio-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5f5f5;
+      text-align: left;
+      overflow: hidden;
+      padding: 3rem 1.5rem;
+    }
+    .bio-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("assets/portrait5.png");
+      background-size: cover;
+      background-position: center 20%;
+      background-repeat: no-repeat;
+      filter: brightness(0.85) saturate(1.0);
+      z-index: -2;
+    }
+    .bio-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(0,255,150,0.12), transparent 55%),
+        linear-gradient(to bottom right, rgba(0,0,0,0.12), rgba(0,0,0,0.45));
+      z-index: -1;
+    }
+    .bio-panel {
+      max-width: 820px;
+      padding: 2.2rem 2.5rem;
+      color: #f5f5f5;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.75);
+      margin-top: 6rem;
+    }
+    .bio-panel h2 {
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+      font-size: 2.2rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .bio-text {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+    }
+    h3 {
+      font-size: 1.35rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 2.2rem 0 1rem 0;
+      color: #a5ffcf;
+    }
+    h4 {
+      font-size: 1.15rem;
+      margin: 1.8rem 0 0.8rem 0;
+      color: #f5f5f5;
+    }
+    ul {
+      padding-left: 1.4rem;
+    }
+    li {
+      margin-bottom: 0.85rem;
+      line-height: 1.6;
+    }
+    @media (max-width: 700px) {
+      .bio-panel {
+        padding: 1.6rem 1.5rem;
+        margin-top: 4rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="bio.html">Bio</a> |
-        <a href="past-work.html">Past Work</a> |
-        <a href="videos.html">Videos</a> |
-        <a href="contact.html">Contact</a>
-    </nav>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="bio.html">Bio</a>
+    <a href="emx-bronze.html">Em × Bronze Ensemble</a>
+    <a href="pastwork.html">Past Work</a>
+    <a href="poweredcymbal.html">Powered Cymbal</a>
+  </nav>
 
-    <hr>
+  <main class="bio-hero">
+    <div class="bio-bg"></div>
+    <section class="bio-panel">
+      <h2>Past Work</h2>
 
-    <h2>Past Work</h2>
+      <h3>SELECTED PERFORMANCES / INSTALLATIONS</h3>
 
-    <h3>SELECTED PERFORMANCES / INSTALLATIONS</h3>
-
-    <h4>2007-2008</h4>
-    <ul>
+      <h4>2007-2008</h4>
+      <ul>
         <li>KUCI “InfiniteNows” radio show as DJ NOW featuring sound art, glitch, noise, spectral, and classical</li>
         <li>SoundWalk, geophone installation, Long Beach, CA</li>
-    </ul>
+      </ul>
 
-    <h4>2004</h4>
-    <ul>
+      <h4>2004</h4>
+      <ul>
         <li>line space line, The Salvation Theater, Silverlake, self-excited cymbals (March, 2004)</li>
         <li>KXLU radio appearance, Glossolalia</li>
         <li>Wind Harp Series, performances/installations various beach volleyball courts in Manhattan Beach; piezo transducer preamp build and design</li>
-    </ul>
+      </ul>
 
-    <h4>2003</h4>
-    <ul>
+      <h4>2003</h4>
+      <ul>
         <li>Center for Experiments in Art, Information and Technology (CEAIT) Festival, CalArts, SQUID (Liam Mooney) + powered cymbals collaborative performance</li>
         <li>Beyond Baroque, Beyond Music Series, powered cymbals, SuperCollider code</li>
         <li>KXLU radio appearance, Glossolalia, tuned bass drum + cymbal + feedback</li>
-    </ul>
+      </ul>
 
-    <h4>2002</h4>
-    <ul>
+      <h4>2002</h4>
+      <ul>
         <li>CEAIT Festival, CalArts, an animated slinky (installation)</li>
         <li>Cannibal Flower (roving art show), powered cymbal performance</li>
         <li>Dimetrodon Collective, solo bass drum</li>
@@ -76,7 +129,16 @@
         <li>The Smell, tuned bass drum and cymbal</li>
         <li>Spiral Gallery, tuned bass drum and cymbal</li>
         <li>Freezing Cold Gallery, Chua’s Circuit (double-scroll of chaos)</li>
-    </ul>
+      </ul>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Matthew O'Donnell</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
